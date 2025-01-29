@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Lobster&display=swap');
+
+:root {
+    --color-primario: #e2f4f1;
+    --color-secundario: #fff;
+    --color-terciario: #457f76;
+    --color-cuarto: #2b554e;
+    --color-negro: #000;
+    --color-border: #dcdada;
+    --color-letras: #3d3d3d;
+    --border-radius: 10px;
+    --transition: all 0.5s ease;
+    --parrafos-desktop: 16px;
+    --parrafos-tablet: 14px;
+    --parrafos-mobile: 12px;
+    --padding-desktop: 30px;
+    --padding-mobile: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-color: var(--color-terciario) var(--color-primario);
+}
+
+body {
+    background-color: var(--color-primario);
+    font-family: "Arima", system-ui;
+}
+
+svg {
+    stroke: var(--color-terciario);
+}
+
+svg:hover {
+    stroke: var(--color-negro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    color: var(--color-terciario);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+p {
+    text-align: justify;
+    color: var(--color-letras);
+    line-height: normal;
+    font-size: var(--parrafos-desktop);
+}
+
+a {
+    color: var(--color-terciario);
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-negro);
+}
+
+span {
+    font-size: 13px;
+    color: var(--color-letras);
+}
+
+hr {
+    height: 0.1px;
+    background-color: var(--color-secundario);
+}
