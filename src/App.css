@@ -88,7 +88,7 @@
     grid-template-columns: 1fr;
     max-width: 1400px;
     place-self: center;
-    margin: 115px 20px 0;
+    margin: 115px 20px 35px;
 }
 
 /* estilos para la seccion main__contenido */
@@ -96,17 +96,27 @@
     margin-bottom: 35px;
 }
 
-.main__container {
+.home__container {
     display: grid;
     grid-template-columns: 7fr 2fr;
     gap: 20px;
 }
 
-.main__contenido {
+.home__contenido {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
+
+.content {
+    background-color: var(--color-secundario);
+    border-radius: var(--border-radius);
+    padding: var(--padding-desktop);
+    border: 1px solid var(--color-border);
+    height: auto;
+    width: 100%;
+}
+
 
 .contenido__inicio {
     background-color: var(--color-secundario);
@@ -129,7 +139,7 @@
     height: 220px;
     border-radius: 50%;
     bottom: 10px;
-    left: 24px;
+    left: 0;
     right: 30px;
     position: absolute;
     border: 6px solid var(--color-secundario);
@@ -146,7 +156,6 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 0 var(--padding-desktop) var(--padding-desktop);
 }
 
 .contenido__inicio-info h1 {
@@ -157,7 +166,7 @@
     font-size: 18px;
 }
 
-.contenido__inicio-redes-sociales {
+.redes-sociales {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -171,244 +180,15 @@
     transform: scale(1.3);
 }
 
-.contenido__sobre-mi,
-.contenido__academia,
-.contenido__certificados,
-.contenido__proyectos {
-    background-color: var(--color-secundario);
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    padding: var(--padding-desktop);
-    border: 1px solid var(--color-border);
-}
-
-.contenido__academia-cursos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.contenido__certificados-curso,
-.contenido__academia-curso {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.academia-curso__logo {
-    width: 100px;
-    height: 110px;
-    display: flex;
-    align-items: center;
-}
-
-.academia-curso__descripcion {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.contenido__certificados-links,
-.contenido__academia-links {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid var(--color-border);
-}
-
-.contenido__certificados-links a,
-.contenido__academia-links a {
-    margin-top: 10px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.contenido__certificados-links a:hover,
-.contenido__academia-links a:hover {
-    color: var(--color-negro);
-}
-
-.contenido__certificados {
-    display: none;
-}
-
-.contenido__certificados-titulo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.contenido__certificados-titulo h2 {
-    margin: 0;
-}
-
-.contenido__certificados-titulo a {
-    cursor: pointer;
-}
-
-.contenido__certificados-cursos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.certificados-curso__logo {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    padding: 10px;
-    background-color: var(--color-secundario);
-}
-
-.certificados-curso__logo img {
-    width: 110px;
-    height: 80px;
-    object-fit: contain;
-}
-
-.certificados-curso__descripcion {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.contenido__certificados-curso {
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    padding: 20px;
-}
-
-/* estilos para section main__info */
-.main__info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    height: auto;
-}
-
-.info__skills,
-.info__idiomas,
-.info__hobbies,
-.info__contactos {
-    background-color: var(--color-secundario);
-    border-radius: var(--border-radius);
-    padding: 20px;
-    border: 1px solid var(--color-border);
-}
-
-.info__skill,
-.info__idioma {
-    margin-bottom: 15px;
-}
-
-.info__hobbie,
-.info__contacto {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.info__skill:last-child,
-.info__idioma:last-child,
-.info__hobbie:last-child,
-.info__contacto:last-child {
-    margin-bottom: 0;
-}
-
-.info__skill-bar,
-.info__idioma-bar {
-    background-color: var(--color-primario);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    height: 10px;
-    margin: 5px 0;
-    position: relative;
-}
-
-.info__skill-progress,
-.info__idioma-progress {
-    background-color: var(--color-terciario);
-    height: 100%;
-}
-
-.info__skill-percent,
-.info__idioma-percent {
-    font-size: 12px;
-    float: right;
-    color: var(--color-letras);
-}
-
-.contenido__proyectos {
-    margin-bottom: 35px;
-}
-
-.proyectos__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    place-content: center;
-    place-items: center;
-    gap: 20px;
-}
-
-.proyecto {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    gap: 20px;
-    padding: 20px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-}
-
-.proyecto img {
-    width: 100%;
-    height: 220px;
-    /* object-fit: cover; */
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-}
-
-.proyecto h3 {
-    text-align: center;
-}
-
-.proyecto p {
-    width: 100%;
-    height: 182px;
-}
-
-.proyecto__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.proyecto__link a {
-    display: grid;
-    display: inline-flex;
-    align-items: center;
-    padding: 5px 10px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-}
-
-.proyecto__link-text {
-    font-weight: 600;
-    font-size: 16px;
-    color: var(--color-terciario);
-    transition: var(--transition);
-}
-
-.proyecto__link-text:hover {
-    color: var(--color-negro);
-}
 
 /* estilos para el footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1400px;
+    justify-content: center;
+    width: 100%;
+}
 .footer__container {
     display: flex;
     justify-content: space-between;
