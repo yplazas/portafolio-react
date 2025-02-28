@@ -1,57 +1,57 @@
-
-import { PiHouseLineBold, PiBooksBold, PiDesktopBold } from "react-icons/pi";
-import { RiContactsBook3Line } from "react-icons/ri";
+import {
+  PiHouseLineBold,
+  PiBooksBold,
+  PiDesktopBold,
+  PiSunBold,
+  PiMoonBold,
+} from "react-icons/pi";
 import NavEnlaces from "./NavEnlaces";
-import { Link } from "react-router";
 
-export default function Header() {
+export default function Header({ darkMode, setDarkMode, hidden }) {
+  const sizeIcon = "22px";
+  return (
+    <header>
+      <nav className={`nav dark-theme ${hidden ? "hidden-nav" : ""}`}>
+        <div className="nav__container">
+          <div className="nav__logo">
+            <a href="index.html" className="nav__logo-link">
+              <span className="nav__logo-text dark-theme">Portafolio</span>
+            </a>
+          </div>
+          <div className="nav__links">
+            <NavEnlaces
+              link={"#home"}
+              textLink={"Inicio"}
+              icon={PiHouseLineBold}
+              sizeIcon={sizeIcon}
+            />
+            <NavEnlaces
+              link={"#estudios"}
+              textLink={"Estudios"}
+              icon={PiBooksBold}
+              sizeIcon={sizeIcon}
+            />
+            <NavEnlaces
+              link={"#proyectos"}
+              textLink={"Proyectos"}
+              icon={PiDesktopBold}
+              sizeIcon={sizeIcon}
+            />
 
-    let sizeIcon = "22px";
-
-    return (
-        <header>
-            <nav className="nav">
-                <div className="nav__container">
-                    <div className="nav__logo">
-                        <Link to="/">
-                            <a href="index.html" className="nav__logo-link">
-                                <span className="nav__logo-text">Portafolio</span>
-                            </a>
-                        </Link>
-                    </div>
-                    <div className="nav__links">
-                        <NavEnlaces
-                            link={"/"}
-                            textLink={"Inicio"}
-                            icon={PiHouseLineBold}
-                            sizeIcon={sizeIcon}
-                        />
-                        <NavEnlaces
-                            link={"/academia"}
-                            textLink={"Academia"}
-                            icon={PiBooksBold}
-                            sizeIcon={sizeIcon}
-                        />
-                        <NavEnlaces
-                            link={"/proyectos"}
-                            textLink={"Proyectos"}
-                            icon={PiDesktopBold}
-                            sizeIcon={sizeIcon}
-                        />
-                        <NavEnlaces
-                            link={"/contacto"}
-                            textLink={"Contacto"}
-                            icon={RiContactsBook3Line}
-                            sizeIcon={sizeIcon}
-                        />
-                    </div>
-                    <div className="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    )
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="toggle-btn dark-theme"
+            >
+              {darkMode ? <PiSunBold /> : <PiMoonBold />}
+            </button>
+          </div>
+          <div className="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }

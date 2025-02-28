@@ -1,22 +1,11 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import HomeContenido from "./HomeContenido";
+import HomeContenido from "./HomeContent";
 import HomeInfo from "./HomeInfo";
-import MainContainer from "./MainContainer";
-export default function Home() {
+
+export default function Home({darkMode}) {
   return (
-    <>
-      <Header />
-      <MainContainer>
-
-          <main className="home__container">
-            <HomeContenido />
-            <HomeInfo />
-          </main>
-
-      </MainContainer>
-      <Footer />
-
-    </>
+    <section id="home" className="home__container">
+      <HomeContenido />
+      <HomeInfo darkMode={darkMode}/>
+    </section>
   );
 }

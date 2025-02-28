@@ -1,20 +1,50 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router";
-import Home from "./components/Home";
-import Proyectos from "./components/Proyectos";
-import Academia from "./components/Academia";
-import Contacto from "./components/contacto";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
+import { certificados } from "./data/db";
 
 function App() {
+  const [certificates] = useState(certificados);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+  const [school, setSchool] = useState("Udemy");
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".dark-theme");
+    elements.forEach((element) => {
+      if (darkMode) {
+        element.classList.add("dark-mode");
+      } else {
+        element.classList.remove("dark-mode");
+      }
+    });
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+
+    const handleScroll = () => {
+      window.scrollY > lastScrollY ? setHidden(true) : setHidden(false);
+      setLastScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+  }, [darkMode, school, hidden, lastScrollY, certificates]);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/academia" element={<Academia />} />
-        <Route path="/proyectos" element={<Proyectos />} />
-        <Route path="/contacto" element={<Contacto />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Header
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+        hidden={hidden}
+        setHidden={setHidden}
+        lastScrollY={lastScrollY}
+        setLastScrollY={setLastScrollY}
+      />
+      <Main school={school} setSchool={setSchool} darkMode={darkMode} />
+      <Footer />
+    </>
   );
 }
 
