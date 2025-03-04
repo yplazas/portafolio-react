@@ -80,6 +80,19 @@ const idiomas = [
   },
 ];
 
+const skills = [
+  {
+    id: uuidv4(),
+    nombre: "Desarrollo Frontend",
+    porcentaje: "60%",
+  },
+  {
+    id: uuidv4(),
+    nombre: "Diseño UI/UX",
+    porcentaje: "30%",
+  },
+]
+
 const estudios = [
   {
     id: uuidv4(),
@@ -241,7 +254,7 @@ const certificados = [
     imagen: "img/certificates/javascript.png",
     fechaFinalizacion: "07/10/2024"
   },
-  
+
 
 ];
 
@@ -298,4 +311,4 @@ const proyectos = [
   },
 ];
 
-export { tegnologias, idiomas, estudios, certificados, proyectos };
+export { tegnologias, idiomas, skills, estudios, certificados, proyectos };

@@ -1,11 +1,4 @@
-export default function Content({ children, height }) {
+export default function Content({ children }) {
   // const seconClass = secondClass ? secondClass: "";
-  return (
-    <div
-      className="content dark-theme"
-      style={{height: height}}
-    >
-      {children}
-    </div>
-  );
+  return <div className="content dark-theme">{children}</div>;
 }

@@ -8,7 +8,7 @@ export default function HomeContenido() {
       <Content>
         <div className="contenido__inicio-portada">
           <PortadaSvg />
-          <div className="inicio-imagen-perfil">
+          <div className="inicio-imagen-perfil dark-theme">
             <img src="img/me.jpeg" alt="imagen de perfil" />
           </div>
         </div>

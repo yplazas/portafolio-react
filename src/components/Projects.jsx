@@ -2,15 +2,24 @@ import { Fragment } from "react";
 import { proyectos } from "../data/db";
 import { FaGithub } from "react-icons/fa6";
 import Content from "./Content";
+import Pagination from "./Pagination";
 
-export default function Projects() {
+export default function Projects({ currentPage, setCurrentPage }) {
+  const ITEMS_PER_PAGE = 3;
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const selectedItems = proyectos.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
+  const totalPages = Math.ceil(proyectos.length / ITEMS_PER_PAGE);
+
   return (
     <section id="proyectos">
       <Content>
         <h2 className="dark-theme">PROYECTOS</h2>
 
         <div className="proyectos__container">
-          {proyectos.map((proyecto) => (
+          {selectedItems.map((proyecto) => (
             <Content key={proyecto.id}>
               <div className="card-proyecto">
                 <div className="card-proyecto-image">
@@ -56,6 +65,11 @@ export default function Projects() {
             </Content>
           ))}
         </div>
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       </Content>
     </section>
   );

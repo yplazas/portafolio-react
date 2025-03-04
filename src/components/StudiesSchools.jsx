@@ -10,7 +10,7 @@ export default function StudiesSchools({ handleInstitucionChange }) {
           {estudios.map((estudio) =>
             estudio.institucion === "Universidad de la Guajira" ? (
               <div
-                className="contenido__estudios-curso not-hover"
+                className="contenido__estudios-curso dark-theme"
                 style={{ cursor: "auto", transform: "scale(1)" }}
                 key={estudio.id}
               >
@@ -25,7 +25,7 @@ export default function StudiesSchools({ handleInstitucionChange }) {
               </div>
             ) : (
               <div
-                className="contenido__estudios-curso"
+                className="contenido__estudios-curso dark-theme"
                 key={estudio.id}
                 onClick={() => handleInstitucionChange(estudio.institucion)}
               >

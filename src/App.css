@@ -1,3 +1,15 @@
+@keyframes Animation {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* estilos para la barra de navegacion */
 .container {
     display: grid;
@@ -28,7 +40,7 @@
 
 .nav.dark-mode {
     background-color: var(--color-secundario-dark);
-    transition: var(--transition);
+    border-bottom: 0.1px solid var(--color-border-dark);
 }
 
 .nav__container {
@@ -170,11 +182,13 @@
     padding: var(--padding-desktop);
     border: 1px solid var(--color-border);
     width: 100%;
-    transition: var(--transition);
+    height: 100%;
+    /* transition: var(--transition); */
 }
 
 .content.dark-mode {
     background-color: var(--color-secundario-dark);
+    border: 1px solid var(--color-border-dark);
 }
 
 
@@ -202,8 +216,12 @@
     left: 0;
     right: 30px;
     position: absolute;
-    border: 2px dashed var(--color-secundario);
+    border: 1px dashed var(--color-border);
     background-color: var(--color-primario);
+}
+
+.inicio-imagen-perfil.dark-mode {
+    border: 1px dashed var(--color-border-dark);
 }
 
 .inicio-imagen-perfil img {
@@ -274,14 +292,10 @@
     gap: 20px;
 }
 
-
 .contenido__estudios-curso {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.contenido__estudios-curso {
     cursor: pointer;
     padding: 10px;
     border: 1px solid var(--color-border);
@@ -290,12 +304,15 @@
 }
 
 .contenido__estudios-curso:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
+.contenido__estudios-curso.dark-mode {
+    border: 1px solid var(--color-border-dark);
+}
 
 .estudios-curso__logo {
-    border: 1px solid var(--color-border);
+    /* border: 1px solid var(--color-border); */
     border-radius: var(--border-radius);
     padding: 10px;
     background-color: var(--color-secundario);
@@ -348,25 +365,8 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    animation: certificadosAnimation 0.5s ease-in-out forwards;
+    animation: Animation 0.5s ease-in-out forwards;
 }
-
-@keyframes certificadosAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-        /* transform: scale(1.05); */
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* .contenido__certificados-curso:hover {
-    transform: scale(1.05);
-} */
 
 .certificados-curso__logo {
     border: 1px solid var(--color-border);
@@ -394,6 +394,44 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pagination button {
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pagination span {
+    color: var(--color-letras);
+    transition: var(--transition);
+}
+
+.pagination span.dark-mode {
+    color: var(--color-letras-dark);
+}
+
+.pagination button:disabled {
+    background-color: #cccccca9;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+}
+
 
 
 .home__info {
@@ -457,9 +495,7 @@
 
 .proyectos__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    place-content: center;
-    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
 }
 
@@ -468,7 +504,7 @@
     flex-direction: column;
     width: 100%;
     gap: 20px;
-    transition: var(--transition);
+    animation: Animation 0.5s ease-in-out forwards;
 }
 
 .card-proyecto:hover {
@@ -690,7 +726,7 @@
         grid-template-columns: 2fr 4fr;
     }
 
-    .card-proyectos__container {
+    .proyectos__container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 0;
         row-gap: 40px;

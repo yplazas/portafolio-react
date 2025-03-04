@@ -1,5 +1,5 @@
 import Content from "./Content";
-import { tegnologias, idiomas } from "../data/db";
+import { tegnologias, idiomas, skills} from "../data/db";
 export default function HomeInfo({darkMode}) {
   return (
     <section className="home__info">
@@ -32,6 +32,23 @@ export default function HomeInfo({darkMode}) {
             </div>
             <span className="info__idioma-percent dark-theme">
               {idioma.porcentaje}
+            </span>
+          </div>
+        ))}
+      </Content>
+      <Content>
+        <h2 className="dark-theme">SKILLS</h2>
+        {skills.map((skill) => (
+          <div className="info__idioma" key={skill.id}>
+            <span className="dark-theme">{skill.nombre}</span>
+            <div className="info__idioma-bar">
+              <div
+                className="info__idioma-progress"
+                style={{ width: skill.porcentaje }}
+              ></div>
+            </div>
+            <span className="info__idioma-percent dark-theme">
+              {skill.porcentaje}
             </span>
           </div>
         ))}

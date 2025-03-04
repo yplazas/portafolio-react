@@ -9,6 +9,7 @@
     --color-cuarto: #2b554e;
     --color-negro: #000;
     --color-border: #dcdada;
+    --color-border-dark: #dcdada25;
     --color-letras: #3d3d3d;
     --color-letras-dark: #dcdada;
     --border-radius: 8px;
@@ -40,7 +41,6 @@ body.dark-mode {
 
 #root {
     background-color: var(--color-primario);
-    transition: var(--transition);
 }
 
 #root.dark-mode {
