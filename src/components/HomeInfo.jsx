@@ -1,6 +1,9 @@
 import Content from "./Content";
-import { tegnologias, idiomas, skills} from "../data/db";
-export default function HomeInfo({darkMode}) {
+import { tegnologias, idiomas, skills } from "../data/db";
+import useGlobalContext from "../hooks/useGlobalContext";
+
+export default function HomeInfo() {
+  const { darkMode } = useGlobalContext();
   return (
     <section className="home__info">
       <Content>
@@ -9,7 +12,11 @@ export default function HomeInfo({darkMode}) {
           {tegnologias.map((tegnologia) => (
             <div className="info-skill" key={tegnologia.id}>
               <img
-                src={darkMode && tegnologia.imageDark  ? tegnologia.imageDark : tegnologia.image}
+                src={
+                  darkMode && tegnologia.imageDark
+                    ? tegnologia.imageDark
+                    : tegnologia.image
+                }
                 alt={tegnologia.nombre}
                 className="info-skill-image"
               />

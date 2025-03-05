@@ -1,19 +1,17 @@
 import Content from "./Content";
 import { certificados } from "../data/db";
 import Pagination from "./Pagination";
+import useGlobalContext from "../hooks/useGlobalContext";
 
-export default function StudiesCertificates({
-  school,
-  currentPage,
-  setCurrentPage,
-}) {
+export default function StudiesCertificates() {
+  const { school, currentPageCerti, setCurrentPageCerti } = useGlobalContext();
   // Filtrar certificados por institución específica
   const filterCertifications = certificados.filter(
     (certificado) => certificado.institucion === school
   );
 
   const ITEMS_PER_PAGE = 6;
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const startIndex = (currentPageCerti - 1) * ITEMS_PER_PAGE;
   const selectedItems = filterCertifications.slice(
     startIndex,
     startIndex + ITEMS_PER_PAGE
@@ -51,8 +49,8 @@ export default function StudiesCertificates({
         {totalPages > 1 ? (
           <Pagination
             totalPages={totalPages}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
+            currentPage={currentPageCerti}
+            setCurrentPage={setCurrentPageCerti}
           />
         ) : (
           <></>

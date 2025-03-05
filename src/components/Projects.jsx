@@ -3,10 +3,13 @@ import { proyectos } from "../data/db";
 import { FaGithub } from "react-icons/fa6";
 import Content from "./Content";
 import Pagination from "./Pagination";
+import useGlobalContext from "../hooks/useGlobalContext";
 
-export default function Projects({ currentPage, setCurrentPage }) {
+export default function Projects() {
+  const { currentPageProjec, setCurrentPageProjec } = useGlobalContext();
+
   const ITEMS_PER_PAGE = 3;
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const startIndex = (currentPageProjec - 1) * ITEMS_PER_PAGE;
   const selectedItems = proyectos.slice(
     startIndex,
     startIndex + ITEMS_PER_PAGE
@@ -67,8 +70,8 @@ export default function Projects({ currentPage, setCurrentPage }) {
         </div>
         <Pagination
           totalPages={totalPages}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
+          currentPage={currentPageProjec}
+          setCurrentPage={setCurrentPageProjec}
         />
       </Content>
     </section>

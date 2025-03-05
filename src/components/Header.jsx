@@ -6,9 +6,11 @@ import {
   PiMoonBold,
 } from "react-icons/pi";
 import NavEnlaces from "./NavEnlaces";
+import useGlobalContext from "../hooks/useGlobalContext";
 
-export default function Header({ darkMode, setDarkMode, hidden }) {
+export default function Header() {
   const sizeIcon = "22px";
+  const { darkMode, setDarkMode, hidden } = useGlobalContext();
   return (
     <header>
       <nav className={`nav dark-theme ${hidden ? "hidden-nav" : ""}`}>
