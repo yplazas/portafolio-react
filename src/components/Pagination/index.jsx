@@ -1,3 +1,4 @@
+import "./pagination.css"
 import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
 
 export default function Pagination({

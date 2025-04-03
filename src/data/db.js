@@ -264,8 +264,41 @@ const proyectos = [
     titulo: "Alura Geek",
     descripcion:
       "Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios visualizar una lista de productos, agregar nuevos productos y eliminar los existentes.En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
+    urlGitHub: "https://github.com/yplazas/Alura-geek",
+    urlDemo: "https://github.com/yplazas/Alura-geek",
+    urlFigma: "https://www.figma.com/design/ZMGsIZRsMIzXZqI1XNsTXD/AluraGeek---new-(Copy)?t=gCkc7fOHKGxu0MV4-0",
+    imagen: "img/projects/aluraGeek.png",
+    tecnologias: ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    id: uuidv4(),
+    titulo: "Encriptador de texto",
+    descripcion: "Es una aplicación que encripta textos, donde se podrá intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada. En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
+    urlGitHub: "https://github.com/yplazas/Encriptador-texto-challenge",
+    urlDemo: "",
+    urlFigma: "https://www.figma.com/design/mECvPV2DBhNx9UASvyZkQZ/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica-(Copy)?node-id=0-1&p=f&t=gCkc7fOHKGxu0MV4-0",
+    imagen: "img/projects/encriptadorTexto.png",
+    tecnologias: ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    id: uuidv4(),
+    titulo: "Dashboard",
+    descripcion:
+      "Este proyecto consiste en la creación de un clon de un dashboard, utilizando conocimientos en HTML y CSS. Para el posicionamiento de los elementos se emplearon técnicas modernas como Grid y Flexbox. Además, este trabajo fue realizado en colaboración con lpolobeltran.",
+    urlGitHub: "https://github.com/yplazas/interfaz-dashboard",
+    urlDemo: "",
+    urlFigma: "",
+    imagen: "img/projects/dashboard.png",
+    tecnologias: ["HTML", "CSS"]
+  },
+  {
+    id: uuidv4(),
+    titulo: "Alura Geek",
+    descripcion:
+      "Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios visualizar una lista de productos, agregar nuevos productos y eliminar los existentes.En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
     urlGitHub: "https://github.com/yplazas/Alura-geek.git",
-    urlDemo: "https://github.com/yplazas/Alura-geek.git",
+    urlDemo: "",
+    urlFigma: "",
     imagen: "img/projects/aluraGeek.png",
     tecnologias: ["HTML", "CSS", "JavaScript"]
   },
@@ -276,36 +309,7 @@ const proyectos = [
       "Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios visualizar una lista de productos, agregar nuevos productos y eliminar los existentes.En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
     urlGitHub: "https://github.com/yplazas/Alura-geek.git",
     urlDemo: "",
-    imagen: "img/projects/aluraGeek.png",
-    tecnologias: ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    id: uuidv4(),
-    titulo: "Alura Geek",
-    descripcion:
-      "Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios visualizar una lista de productos, agregar nuevos productos y eliminar los existentes.En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
-    urlGitHub: "https://github.com/yplazas/Alura-geek.git",
-    urlDemo: "",
-    imagen: "img/projects/aluraGeek.png",
-    tecnologias: ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    id: uuidv4(),
-    titulo: "Alura Geek",
-    descripcion:
-      "Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios visualizar una lista de productos, agregar nuevos productos y eliminar los existentes.En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
-    urlGitHub: "https://github.com/yplazas/Alura-geek.git",
-    urlDemo: "",
-    imagen: "img/projects/aluraGeek.png",
-    tecnologias: ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    id: uuidv4(),
-    titulo: "Alura Geek",
-    descripcion:
-      "Este proyecto simula el funcionamiento de una tienda virtual, permitiendo a los usuarios visualizar una lista de productos, agregar nuevos productos y eliminar los existentes.En su desarrollo se implementaron diversas técnicas fundamentales de desarrollo web, utilizando HTML, CSS y JavaScript.",
-    urlGitHub: "https://github.com/yplazas/Alura-geek.git",
-    urlDemo: "",
+    urlFigma: "",
     imagen: "img/projects/aluraGeek.png",
     tecnologias: ["HTML", "CSS", "JavaScript"]
   },

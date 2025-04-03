@@ -1,6 +1,6 @@
-import { estudios } from "../data/db";
-import Content from "./Content";
-import useGlobalContext from "../hooks/useGlobalContext";
+import { estudios } from "../../data/db";
+import Content from "../Content";
+import useGlobalContext from "../../hooks/useGlobalContext";
 
 export default function StudiesSchools() {
   const { handleInstitucionChange } = useGlobalContext();

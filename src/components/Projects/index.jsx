@@ -1,9 +1,10 @@
+import "./projects.css"
 import { Fragment } from "react";
-import { proyectos } from "../data/db";
-import { FaGithub } from "react-icons/fa6";
-import Content from "./Content";
-import Pagination from "./Pagination";
-import useGlobalContext from "../hooks/useGlobalContext";
+import { proyectos } from "../../data/db";
+import { FaGithub, FaFigma, FaCirclePlay } from "react-icons/fa6";
+import Content from "../Content";
+import Pagination from "../Pagination";
+import useGlobalContext from "../../hooks/useGlobalContext";
 
 export default function Projects() {
   const { currentPageProjec, setCurrentPageProjec } = useGlobalContext();
@@ -35,19 +36,30 @@ export default function Projects() {
                     <a
                       target="_blank"
                       href={proyecto.urlGitHub}
-                      className="icon-github dark-theme"
+                      className="icon-project dark-theme"
                     >
-                      <FaGithub style={{ width: "30px", height: "30px" }} />
+                      <FaGithub style={{ width: "27px", height: "27px" }} />
                     </a>
+
+                    {proyecto.urlFigma ? (
+                      <a
+                        target="_blank"
+                        href={proyecto.urlFigma}
+                        className="icon-project dark-theme"
+                      >
+                        <FaFigma style={{ width: "27px", height: "27px" }} />
+                      </a>
+                    ) : (
+                      <></>
+                    )}
+
                     {proyecto.urlDemo ? (
                       <a
                         target="_blank"
-                        href={proyecto.urlGitHub}
-                        className="button-demo"
+                        href={proyecto.urlDemo}
+                        className="icon-project dark-theme"
                       >
-                        <span className="card-proyecto__link-text dark-theme">
-                          Demo
-                        </span>
+                        <FaCirclePlay style={{ width: "27px", height: "27px" }} />
                       </a>
                     ) : (
                       <></>

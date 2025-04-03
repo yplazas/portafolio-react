@@ -1,7 +1,7 @@
-import Content from "./Content";
-import { certificados } from "../data/db";
-import Pagination from "./Pagination";
-import useGlobalContext from "../hooks/useGlobalContext";
+import Content from "../Content";
+import { certificados } from "../../data/db";
+import Pagination from "../Pagination";
+import useGlobalContext from "../../hooks/useGlobalContext";
 
 export default function StudiesCertificates() {
   const { school, currentPageCerti, setCurrentPageCerti } = useGlobalContext();

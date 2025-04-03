@@ -1,3 +1,4 @@
+import "./studies.css";
 import StudiesCertificates from "./StudiesCertificates";
 import StudiesSchools from "./StudiesSchools";
 

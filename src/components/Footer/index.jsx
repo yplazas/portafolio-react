@@ -1,4 +1,5 @@
-import RedSocial from "./RedSocial";
+import "./footer.css";
+import RedSocial from "../RedSocial";
 import { FaRegCopyright } from "react-icons/fa6";
 
 export default function Footer() {

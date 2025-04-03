@@ -1,6 +1,6 @@
-import Content from "./Content";
-import PortadaSvg from "./PortadaSvg";
-import RedSocial from "./RedSocial";
+import Content from "../Content";
+import PortadaSvg from "../PortadaSvg";
+import RedSocial from "../RedSocial";
 
 export default function HomeContenido() {
   return (

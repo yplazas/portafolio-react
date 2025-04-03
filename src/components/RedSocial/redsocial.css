@@ -1,0 +1,27 @@
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes-sociales__link {
+    transition: var(--transition);
+    color: var(--color-terciario);
+}
+
+.redes-sociales__link:hover {
+    transform: scale(1.3);
+}
+
+.redes-sociales__link.dark-mode {
+    color: var(--color-secundario);
+}
+
+@media (max-width: 834px) {
+
+    .redes-sociales__link svg {
+        width: 25px;
+        height: 25px;
+    }
+
+}

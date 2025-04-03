@@ -1,3 +1,4 @@
+import "./header.css";
 import {
   PiHouseLineBold,
   PiBooksBold,
@@ -6,7 +7,7 @@ import {
   PiMoonBold,
 } from "react-icons/pi";
 import NavEnlaces from "./NavEnlaces";
-import useGlobalContext from "../hooks/useGlobalContext";
+import useGlobalContext from "../../hooks/useGlobalContext";
 
 export default function Header() {
   const sizeIcon = "22px";

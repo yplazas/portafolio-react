@@ -1,6 +1,6 @@
-import Content from "./Content";
-import { tegnologias, idiomas, skills } from "../data/db";
-import useGlobalContext from "../hooks/useGlobalContext";
+import Content from "../Content";
+import { tegnologias, idiomas, skills } from "../../data/db";
+import useGlobalContext from "../../hooks/useGlobalContext";
 
 export default function HomeInfo() {
   const { darkMode } = useGlobalContext();
